@@ -1,0 +1,19 @@
+namespace MarketProject.Core.Statistics;
+
+public static class Statistics
+{
+    public static double Mean(IEnumerable<double> data)
+    {
+        var list = data.ToList();
+        return list.Sum() / list.Count;
+    }
+
+    public static double StandardDeviation(IEnumerable<double> data)
+    {
+        var list = data.ToList();
+        double mean = Mean(list);
+
+        double variance = list.Sum(x => Math.Pow(x - mean, 2)) / (list.Count - 1);
+        return Math.Sqrt(variance);
+    }
+}
