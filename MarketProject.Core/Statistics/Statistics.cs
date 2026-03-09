@@ -1,6 +1,6 @@
 namespace MarketProject.Core.Statistics;
 
-public static class Statistics
+public static class DescriptiveStatistics
 {
     public static double Mean(IEnumerable<double> data)
     {

@@ -1,5 +1,6 @@
 namespace MarketProject.Core.Calculations;
 
+
 public static class ReturnCalculator
 {
     public static IEnumerable<double> LogReturns(IReadOnlyList<double> prices)

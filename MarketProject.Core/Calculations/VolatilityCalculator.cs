@@ -8,7 +8,7 @@ public static class VolatilityCalculator
         IEnumerable<double> returns,
         int periodsPerYear)
     {
-        double sigma = Statistics.StandardDeviation(returns);
+        double sigma = DescriptiveStatistics.StandardDeviation(returns);
         return sigma * Math.Sqrt(periodsPerYear);
     }
 }
