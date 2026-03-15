@@ -1,11 +1,15 @@
 ﻿using MarketProject.Core.Calculations;
 using MarketProject.Core.Models;
+using MarketProject.Core.Types;
+using MarketProject.Core.Calculations.Interest;
 
-var prices = new List<double> { 100, 105, 110, 120 };
+var rate = new InterestRate(
+    0.06m,
+    CompoundingType.Discrete,
+    2);
 
-var returns = ReturnCalculator.LogReturns(prices);
-
-foreach (var r in returns)
-{
-    Console.WriteLine(r);
-}
+var result = FutureValue.CalculateFutureValue(
+    1000,
+    rate,
+    1);
+Console.WriteLine($"Future Value: {result}");  
