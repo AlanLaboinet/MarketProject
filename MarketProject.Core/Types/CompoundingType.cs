@@ -1,5 +1,4 @@
 using System;
-
 namespace MarketProject.Core.Types;
 
 public enum CompoundingType
